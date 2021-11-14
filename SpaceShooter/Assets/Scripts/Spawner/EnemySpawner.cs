@@ -8,7 +8,10 @@ public class EnemySpawner : MonoBehaviour
     public float maxSpawnTimeFirst = 3f;
 
     public float minSpawnInterval = 1f;
-    public float maxSpawnInterval = 7f;
+    public float maxSpawnInterval = 4f;
+
+    public float minEnemySpeed = 0.3f;
+    public float maxEnemySpeed = 1f;
 
     private float shiftY = 0.2f;
 
@@ -28,6 +31,7 @@ public class EnemySpawner : MonoBehaviour
             GameConfig.maxCoords.y + shiftY
             );
 
-        Instantiate(enemy, spawnPos, Quaternion.identity);
+        GameObject curEnemy = Instantiate(enemy, spawnPos, Quaternion.identity);
+        curEnemy.GetComponent<EnemyMovement>().speed = Random.Range(minEnemySpeed, maxEnemySpeed);
     }
 }

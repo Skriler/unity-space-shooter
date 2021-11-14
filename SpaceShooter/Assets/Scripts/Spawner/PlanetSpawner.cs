@@ -29,7 +29,7 @@ public class PlanetSpawner : MonoBehaviour
     {
         int index = Random.Range(0, planets.GetLength(0));
         float scale = Random.Range(minScale, maxScale);
-        float shiftY = scale * 10;
+        float shiftY = scale * 5;
 
         Vector2 spawnPos = new Vector2(
             Random.Range(GameConfig.minCoords.x, GameConfig.maxCoords.x), 
@@ -40,6 +40,6 @@ public class PlanetSpawner : MonoBehaviour
 
         planet.transform.localScale = new Vector3(scale, scale, scale);
         planet.GetComponent<Planet>().speed = Random.Range(minPlanetSpeed, maxPlanetSpeed);
-        planet.GetComponent<Planet>().accuracy = scale * 10;
+        planet.GetComponent<Planet>().accuracy = scale * 5;
     }
 }

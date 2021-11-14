@@ -8,9 +8,7 @@ public class HUDManager : MonoBehaviour
     public GameObject ScoreText;
 
     void Start()
-    {
-        
-    }
+    { }
 
     void Update()
     {

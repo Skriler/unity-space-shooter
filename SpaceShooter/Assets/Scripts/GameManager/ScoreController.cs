@@ -13,4 +13,9 @@ public static class ScoreController
     {
         Score += value;
     }
+
+    public static void ResetScore()
+    {
+        Score = 0;
+    }
 }

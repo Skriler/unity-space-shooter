@@ -16,7 +16,7 @@ public class PlayerFire : MonoBehaviour
 
     private void CheckFire()
     {
-        if (Input.GetMouseButton(0))
+        if (Input.GetKey(KeyCode.LeftShift) || Input.GetMouseButton(0))
 		{
 			Fire();
 		}

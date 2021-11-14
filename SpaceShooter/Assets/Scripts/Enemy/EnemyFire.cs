@@ -6,7 +6,7 @@ public class EnemyFire : MonoBehaviour
     public Transform firePoint;
 
     public float fireTimeFirst = 1f;
-    public float fireInterval = 1.5f;
+    public float fireInterval = 1f;
 
     void Start() 
     {

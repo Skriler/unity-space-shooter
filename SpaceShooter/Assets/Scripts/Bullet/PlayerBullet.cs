@@ -16,10 +16,15 @@ public class PlayerBullet : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D coll) 
     {
-        if (coll.tag == "Enemy")
+        switch (coll.tag)
         {
-            coll.GetComponent<EnemyHealthController>().TakeDamage(damage);
-            Destroy(gameObject);
+            case "Enemy":
+                coll.GetComponent<EnemyHealthController>().TakeDamage(damage);
+                Destroy(gameObject);
+                break;
+            case "Asteroid":
+                Destroy(gameObject);
+                break;
         }
     }
 

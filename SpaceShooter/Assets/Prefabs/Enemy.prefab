@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8416986328383000030}
   - component: {fileID: 8416986328383000029}
+  - component: {fileID: 2381883287274356928}
   - component: {fileID: 8416986328383000028}
   - component: {fileID: 8416986328383000027}
   - component: {fileID: 8416986328383000026}
@@ -88,6 +89,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &2381883287274356928
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8416986328383000024}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2c88ca3d423059c47b1b4876009bdff5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!50 &8416986328383000028
 Rigidbody2D:
   serializedVersion: 4
@@ -138,6 +158,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.5
+  oneSideMovementRate: 5
 --- !u!114 &8416986328383000025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -154,7 +175,7 @@ MonoBehaviour:
     type: 3}
   firePoint: {fileID: 8416986328444578132}
   fireTimeFirst: 1
-  fireInterval: 1.5
+  fireInterval: 1
 --- !u!114 &1871694886310542883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167,7 +188,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe29cde7487f0814ea092554b7c69836, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 50
+  scoreCost: 50
+  MaxHP: 50
+  collDamage: 10
 --- !u!1 &8416986328444578131
 GameObject:
   m_ObjectHideFlags: 0
